@@ -1,6 +1,6 @@
 Here’s a high-level overview and notes on implementing key data structures and algorithms in JavaScript:
 
-### 1. **Array**
+## 1. **Array**
    - **Traversing an Array**:
      - Loop through each element using `for`, `forEach`, or `map`.
    - **Sorting**:
@@ -19,7 +19,7 @@ Here’s a high-level overview and notes on implementing key data structures and
      - **Reversing**: `arr.reverse()`.
      - **Filtering**: `arr.filter()` filters items based on a condition.
 
-### 2. **Linked List**
+## 2. **Linked List**
 
 Each node in a linked list typically contains two components: the `value` (data) and the `next` pointer (which points to the next node).
 
@@ -32,7 +32,7 @@ class ListNode {
 }
 ```
 
-### **2. Linked List Class Definition**
+### **Linked List Class Definition**
 A linked list is a series of connected nodes. The `LinkedList` class typically maintains a reference to the `head` of the list and performs operations like insertion, deletion, and traversal.
 
 ```javascript
@@ -43,7 +43,7 @@ class LinkedList {
 }
 ```
 
-### **3. Basic Linked List Operations**
+### **Basic Linked List Operations**
 
 #### **a. Insert at Head**
 This operation inserts a new node at the beginning of the list. The new node becomes the new `head`.
@@ -182,12 +182,12 @@ Example usage:
 list.traverse();  // Prints: 30, 20
 ```
 
-### **4. Handling Edge Cases**
+### **Handling Edge Cases**
 - **Empty list**: When the `head` is `null`, operations like deletion or traversal need special handling.
 - **Single node list**: Inserting or deleting in a list with a single node needs careful pointer updates.
 - **Circular linked lists**: These lists require special conditions to handle the traversal of circular structures.
 
-### **5. Time Complexity of Operations**
+### **Time Complexity of Operations**
 - **Insert at Head**: O(1) (constant time, no traversal needed)
 - **Insert at Tail**: O(n) (must traverse the list to find the tail)
 - **Delete Node**: O(n) (traverse to find the node to delete)
@@ -254,7 +254,7 @@ These are the core operations that form the foundation of a linked list and are 
    ```
    - **Applications**: BFS traversal, task scheduling, etc.
 
-### 8. **Binary Tree - DFS**
+## 8. **Binary Tree - DFS**
 ### Binary Tree - Depth First Search (DFS)
 
 Depth First Search (DFS) is a tree traversal algorithm that explores as far along a branch as possible before backtracking. DFS can be implemented using **recursion** or **iteration** with a stack.
@@ -457,7 +457,7 @@ Post-order Traversal (Recursive):
 ### Conclusion:
 DFS traversals are foundational for tree algorithms. The recursive versions are straightforward, but in real-world scenarios, the iterative versions are often more efficient (especially in systems where recursion depth could exceed the system stack limit).
 
-### 9. **Binary Tree - BFS**
+## 9. **Binary Tree - BFS**
 
 **Breadth First Search (BFS)**, also known as **Level Order Traversal**, is a traversal technique that explores all nodes at the present depth level before moving on to nodes at the next depth level. It is typically implemented using a **queue** data structure, which ensures nodes are processed in the correct order.
 
@@ -647,7 +647,7 @@ BFS Traversal:
 ### Conclusion:
 BFS is essential for level-based tree operations. While DFS goes deep into a tree, BFS processes the tree in a layer-by-layer manner, which is helpful for solving problems like level-order traversal, finding the shortest path, or checking the completeness of a tree.
 
-### 10. **Binary Search Tree (BST)**
+## 10. **Binary Search Tree (BST)**
 A **Binary Search Tree (BST)** is a data structure that facilitates efficient searching, insertion, and deletion of elements. It's a binary tree, meaning each node has at most two children, and it follows a specific ordering property:
 
 ### Properties of a Binary Search Tree:
@@ -824,7 +824,7 @@ In this implementation:
 ### Conclusion:
 Binary Search Trees are versatile data structures that provide efficient methods for searching, inserting, and deleting elements. While they perform well when balanced, care must be taken to avoid degenerating into an unbalanced state, which can be addressed with self-balancing variants like AVL or Red-Black Trees.
 
-### 11. **Graphs - DFS**
+## 11. **Graphs - DFS**
 **Graphs** are data structures used to represent relationships between objects. They consist of nodes (also called vertices) and edges (connections between nodes). Graphs can be directed or undirected, weighted or unweighted, cyclic or acyclic.
 
 ### Depth-First Search (DFS):
@@ -1005,7 +1005,7 @@ The exact order may vary depending on the order of neighbors pushed onto the sta
 ### Summary:
 Depth-First Search (DFS) is a fundamental graph traversal algorithm that explores as deep as possible along a path before backtracking. It is efficient for exploring large graphs and has many practical applications, such as pathfinding, topological sorting, and cycle detection. The choice between recursive and iterative implementations depends on the specific requirements and constraints, such as stack depth and the presence of recursion limits.
 
-### 12. **Graphs - BFS**
+## 12. **Graphs - BFS**
 **Breadth-First Search (BFS)** is an algorithm used for traversing or searching through a graph. It starts at a given node (source node) and explores all its neighbors before moving on to their neighbors, essentially exploring the graph level by level.
 
 ### Characteristics of BFS:
@@ -1148,7 +1148,7 @@ Order of visitation: **A, B, C, D, E, F**
 ### Summary:
 Breadth-First Search (BFS) is a fundamental graph traversal algorithm that explores all nodes at a given level before moving on to the next level. It is particularly useful for finding the shortest path in unweighted graphs, level order traversal of trees, and detecting cycles in graphs. Its queue-based approach makes it distinct from Depth-First Search, which uses a stack and dives deeper into the graph before backtracking. BFS's time and space complexity are manageable for most practical applications, making it an essential tool for many graph-related problems.
 
-### 13. **Heaps - Priority Queue**
+## 13. **Heaps - Priority Queue**
 A **heap** is a specialized binary tree-based data structure that satisfies the **heap property**:
 - In a **max-heap**, for any given node, the value of that node is greater than or equal to the values of its children.
 - In a **min-heap**, for any given node, the value of that node is less than or equal to the values of its children.
@@ -1315,8 +1315,7 @@ console.log(minHeap.extractMin()); // Output: 3
 ### Summary:
 Heaps are efficient data structures for implementing priority queues, supporting operations such as insertion, extraction, and peek in logarithmic time. Min-heaps prioritize the smallest elements, while max-heaps prioritize the largest. Their array-based representation makes them space-efficient, and they are widely used in algorithms like Dijkstra's, heapsort, and priority scheduling.
 
-### 14. **Binary Search**
-### Binary Search
+## 14. **Binary Search**
 
 **Binary Search** is an efficient algorithm used to find the position of a target value within a **sorted** array. The basic idea is to repeatedly divide the search space in half, which reduces the number of elements to be searched significantly.
 
